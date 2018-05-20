@@ -3,17 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Test Icon</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
 </head>
 <style>
 	*{
 		margin: 0;
 		padding: 0;
 	}
-	/*@font-face{
+	@font-face{
 		font-family: FontA;
-		src:url(fonts/FontAwesome.ttf);
-	}*/
+		src:url(fonts/fontawesome-free-5.0.13/web-fonts-with-css/webfonts/fa-solid-900.woff) format('woff');
+	}
 	body{
 		background: #9b9b9b;
 	}
@@ -44,12 +44,31 @@
 		text-decoration: none;
 		color: #fdfdfd;
 	}
+	.icon-menu{
+		/*content: "\f015";
+		display: inline-block;
+		font-style: normal;
+		-moz-osx-font-smoothing:grayscale;
+		-webkit-font-smoothing:antialiased;
+		display:inline-block;
+		font-style:normal;
+		font-variant:normal;
+		text-rendering:auto;
+		line-height:1;*/
+		display: block;
+		font-style: normal;
+		
+	}
+	.icon-menu:before{
+		font-family:"FontA";
+		content:"\f015";
+	}
 </style>
 <body>
 	<div class="container">
 		<div class="menu">
 			<ul>
-				<li><a href=""><i class="fa fa-home"></i></a></li>
+				<li><a href=""><i class="icon-menu"></i></a></li>
 				<li><a href="">Projects</a></li>
 				<li><a href="">About</a></li>
 				<li><a href="">Contact</a></li>
