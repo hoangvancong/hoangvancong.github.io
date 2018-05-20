@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Test Icon</title>
+	<title>Test</title>
 	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
+
+	<!-- owl Carousel -->
+	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+	<script src="vendors/jquery.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+	<!-- End owl Carousel -->
+
 </head>
 <style>
 	*{
@@ -63,6 +71,16 @@
 		font-family:"FontA";
 		content:"\f015";
 	}
+
+
+    #owl-demo .item{
+      margin: 3px;
+    }
+    #owl-demo .item img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 </style>
 <body>
 	<div class="container">
@@ -75,6 +93,70 @@
 				<li><a href="">Login</a></li>
 			</ul>
 		</div>
+
+		<div class="owl-carousel owl-theme" id="owl-demo">
+		    <div class="item"><img src="images/slider/i1.jpg" alt="" width="100%" height="100%"></div>
+		    <div class="item"><img src="images/slider/i2.jpg" alt=""></div>
+		    <div class="item"><img src="images/slider/i1.jpg" alt="" width="100%" height="100%"></div>
+		    <div class="item"><img src="images/slider/i2.jpg" alt="" width="100%" height="100%"></div>
+		    <div class="item"><img src="images/slider/i1.jpg" alt="" width="100%" height="100%"></div>
+		    <div class="item"><img src="images/slider/i2.jpg" alt="" width="100%" height="100%"></div>
+		    <div class="item"><img src="images/slider/i1.jpg" alt="" width="100%" height="100%"></div>
+
+		</div>
+
 	</div>
+	<!-- End container -->
+	<script>
+    $(document).ready(function() {
+     
+	       $("#owl-demo").owlCarousel({
+ 
+			    navigation : false, // Hiện thị nút trước và sau
+			 	goToFirst:true,	 //Trượt tới slide đầu tiên nếu autoPlay kết thúc
+			 	goToFirstSpeed:500, // Tốc độ trượt của goToFirst
+			    slideSpeed : 300, //Tốc độ trượt ms
+			   	paginationSpeed : 400, //Tốc độ phân trang ms
+				pagination:true, //Hiển thị phân trang 
+			    paginationNumbers:true, //Hiển thị số trong nút phân trang
+
+			    items : 2, //Số lượng mục tối đa được hiển thị cùng 1 lúc với chiều rộng trình duyệt rộng nhất
+			    itemsDesktop : false, /*Định dạng này là [x, y]
+			    					x = chiều rộng trình duyệt và 
+			    					y = số trang trình bày được hiển thị.
+			    					Ví dụ [1199,4] có nghĩa là
+			    					if (cửa sổ < = 1199) {
+			    						hiển thị 4 trang trình bày trên mỗi trang
+			    					},
+			    					sử dụng "itemsDesktop: false" để ghi đè các cài đặt này.
+			    */
+			    itemsDesktopSmall : false, //Như trên
+			    itemsTablet: false, //Như trên
+			    itemsMobile : false //Như trên
+		 
+		  });
+
+	       /*
+	       //get carousel instance data and store it in variable owl
+			var owl = $(".owl-carousel").data('owlCarousel');
+			 
+			//Public methods
+			owl.next()   // Go to next slide
+			owl.prev()   // Go to previous slide
+			owl.goTo(x)  // Go to x slide
+			 
+			owl.update() // Update Slide
+			 
+			owl.buildControlls()    // Build Controlls
+			owl.destroyControlls()  // Remove Controlls
+			 
+			owl.play() // Autoplay
+			owl.stop() // Autoplay Stop
+			 
+			//more to come...
+			*/
+	     
+	    });
+	</script>
 </body>
 </html>
