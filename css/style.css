@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+  background: #f9f9f9;	
+}
+.menu{
+	width: 480px;
+	margin: 10px auto;
+	display: flex;
+}
+.menu li{
+  list-style: none;
+	padding: 10px;
+	background: #09f5d4;
+	border-right: 1px solid gray;
+}
+.menu li:last-child{
+	border: none;
+}
+.menu .active{
+	background: #09d4f5;
+}
+.menu li:hover{
+  background: #09d4f5;
+	cursor: pointer;
+}
+
+/* Grid element */
+
+.element-item{
+	margin: 10px;
+	border: 1px solid gray;
+  width: 100px;
+	padding: 10px;
+	color: #fff;
+}
+
+.eat{
+  background: red;
+}
+.drink {
+  background: green;
+}
+.play{
+  background: blue;
+}

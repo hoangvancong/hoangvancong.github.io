@@ -112,7 +112,7 @@
      
 	       $("#owl-demo").owlCarousel({
  
-			    navigation : false, // Hiện thị nút trước và sau
+			    nav: true, // Hiện thị nút trước và sau
 			 	goToFirst:true,	 //Trượt tới slide đầu tiên nếu autoPlay kết thúc
 			 	goToFirstSpeed:500, // Tốc độ trượt của goToFirst
 			    slideSpeed : 300, //Tốc độ trượt ms
@@ -120,6 +120,8 @@
 				pagination:true, //Hiển thị phân trang 
 			    paginationNumbers:true, //Hiển thị số trong nút phân trang
 			    loop:true, //lặp vô hạn
+			    autoPlay:true, //Tự động trượt
+			    autoPlayHoverPause:true, //Dừng trượt khi hover
 			    responsive:{
 			    	//màn hình 0px trở lên
 			    	0:{
